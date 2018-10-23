@@ -1,0 +1,423 @@
+body {
+  overflow: hidden;
+  font-family: "Microsoft YaHei", "Hiragino Sans GB";
+  width: 100%;
+  height: 100%;
+}
+
+#background {
+  overflow: hidden;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition-duration: 0.5s;
+}
+
+#background-image {
+  width: 100%;
+  height: 100%;
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#background-info {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 2% 5% 0;
+  z-index: 2;
+}
+
+#background-info a {
+  font-size: 1.2vw;
+  text-align: right;
+  vertical-align: bottom;
+  color: white;
+  text-decoration: none;
+}
+
+#background-info a:hover {
+  color: lightgray;
+}
+
+#overlay {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+#inputTrigger {
+  position: fixed;
+  opacity: 0;
+}
+
+#time {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 5% 2%;
+  vertical-align: auto;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Firefox */
+  -moz-user-select: none;
+  /* IE10+/Edge */
+  -ms-user-select: none;
+  /* Standard */
+  user-select: none;
+}
+
+#clock {
+  font-size: 6vw;
+  font-weight: lighter;
+}
+
+#date {
+  font-size: 2.6vw;
+  font-weight: lighter;
+}
+
+#icon {
+  filter: invert(1);
+  padding: 5px;
+}
+
+.send-email {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 1.5% 2%;
+}
+
+.send-email:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.internet-1 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 2% 1.5% 0;
+}
+
+#login {
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#user-input {
+  text-align: center;
+  position: fixed;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 30vh 0;
+}
+
+#profile-icon {
+  border-radius: 50%;
+  width: 176px;
+  height: auto;
+}
+
+#name {
+  font-size: 42px;
+  font-weight: lighter;
+  margin: 1.5vh 0;
+}
+
+#pw {
+  height: 34px;
+  width: 270px;
+  border: none;
+  padding: 0 7px;
+  margin: 10px 0 0 0;
+  -webkit-box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+#pw:hover {
+  -webkit-box-shadow: unset;
+  -moz-box-shadow: unset;
+  box-shadow: unset;
+}
+
+#pw:focus {
+  outline-width: 0;
+}
+
+#forget,
+#options {
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+#forget:hover,
+#options:hover {
+  color: lightgray;
+}
+
+#wrongPassword {
+  display: none;
+}
+
+#ok-button {
+  color: white;
+  width: 100px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+}
+
+#ok-button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+#ok-button:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#ok-button:focus {
+  outline-width: 0;
+}
+
+#ok-button-border {
+  margin: 0 auto;
+  width: 100px;
+  border: 2px solid white;
+}
+
+#bottom-2 {
+  position: fixed;
+  bottom: 0%;
+  right: 0;
+  margin: 0 4% 2% 0;
+  transform: scale(1.1);
+}
+
+.ease-of-access {
+  padding: 0 0 2px 3px;
+  height: 28px;
+  width: auto;
+}
+
+.ease-of-access:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.power-off:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+#social-links {
+  display: none;
+  width: 100px;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 7% 40% 0;
+}
+
+#social-links.show {
+  display: block;
+}
+
+#social-links a {
+  height: 30px;
+  font-size: 12px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+#social-links a:hover {
+  background: lightgray;
+}
+
+span {
+  float: left;
+  padding: 6px 0 0 8px;
+}
+
+#svg-icons {
+  padding: 3px 0 0 10px;
+  height: 24px;
+  float: left;
+}
+
+@media screen and (max-width: 996px) {
+  #time {
+    padding: 0 0 8% 2%;
+  }
+
+  #clock {
+    font-size: 12vw;
+    font-weight: lighter;
+  }
+
+  #date {
+    font-size: 4.3vw;
+    font-weight: lighter;
+  }
+
+  #background-info {
+    margin: 0 3% 8.5% 0;
+  }
+
+  #background-info a {
+    font-size: 1.6vw;
+  }
+
+  #bottom-2 {
+    margin: 0 4% 4% 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #time {
+    padding: 0 0 10% 2%;
+  }
+
+  #clock {
+    font-size: 12vw;
+    font-weight: lighter;
+  }
+
+  #date {
+    font-size: 4.3vw;
+    font-weight: lighter;
+  }
+
+  #background-info {
+    margin: 0 4% 10.5% 0;
+  }
+
+  #background-info a {
+    font-size: 2vw;
+  }
+
+  #bottom-2 {
+    margin: 0 4% 4% 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #time {
+    padding: 0 0 24% 4%;
+  }
+
+  #clock {
+    font-size: 30vw;
+    font-weight: lighter;
+  }
+
+  #date {
+    margin-top: -20px;
+    font-size: 8vw;
+    font-weight: lighter;
+  }
+
+  #background-info {
+    left: 0;
+    margin: 0 0 15% 4%;
+  }
+
+  #background-info a {
+    font-size: 3.6vw;
+  }
+
+  #user-input {
+    margin: 12vh 0;
+  }
+
+  #bottom-2 {
+    margin: 0 4% 4% 0;
+  }
+}
+
+@media screen and (max-width: 996px) and (orientation: landscape) {
+  #bottom-2 {
+    margin: 0 3% 1% 0;
+  }
+}
+
+@media screen and (max-height: 556px) and (orientation: landscape) {
+  #user-input {
+    margin-top: -3vh;
+    transform: scale(0.75);
+  }
+
+  #bottom-2 {
+    margin: 0 2% 0 0;
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .send-email,
+  .internet-1 {
+    transform: scale(1.5);
+  }
+
+  #bottom-2 {
+    transform: scale(1.5);
+  }
+
+  #user-input {
+    margin: 50vh 0;
+    transform: scale(1.5);
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .send-email,
+  .internet-1 {
+    transform: scale(2.4);
+  }
+
+  .send-email {
+    margin: 0 0 2% 2.4%;
+  }
+
+  .internet-1 {
+    margin: 0 2.4% 2% 0;
+  }
+
+  #bottom-2 {
+    transform: scale(2.4);
+    margin: 0 5% 2.4% 0;
+  }
+
+  #user-input {
+    margin: 96vh 0;
+    transform: scale(2.4);
+  }
+}
