@@ -63,7 +63,7 @@ function forgot() {
 }
 
 function signInOption() {
-    var message = "Code you own options, lazy ass!"
+    var message = "Code your own options, lazy ass!"
     alert(message);
 }
 
